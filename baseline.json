@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-15 15:29:39 UTC",
+  "dataset": "bundled",
+  "retriever": "bm25",
+  "metrics": {
+    "retrieval.recall@5": 0.944444,
+    "retrieval.ndcg@5": 0.913209,
+    "retrieval.precision@5": 0.216667,
+    "retrieval.mrr": 0.908565,
+    "detector.f1": 0.9333
+  }
+}

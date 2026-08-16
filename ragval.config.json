@@ -1,0 +1,25 @@
+{
+  "_comment": "Quality gate for CI. Absolute thresholds catch a pipeline that was never good enough; the regression block catches a change that quietly makes it worse. Tolerance is roughly the half-width of the bootstrap CI on this test set, so noise alone cannot fail the build.",
+  "thresholds": {
+    "retrieval": {
+      "recall@5": 0.85,
+      "ndcg@5": 0.85,
+      "hit_rate@5": 0.85,
+      "mrr": 0.85
+    },
+    "detector": {
+      "f1": 0.85,
+      "recall": 0.85,
+      "roc_auc": 0.90
+    }
+  },
+  "regression_tolerance": 0.02,
+  "regression_metrics": [
+    "retrieval.recall@5",
+    "retrieval.ndcg@5",
+    "retrieval.precision@5",
+    "retrieval.mrr",
+    "detector.f1",
+    "detector.roc_auc"
+  ]
+}
