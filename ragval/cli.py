@@ -302,7 +302,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     handler = _COMMANDS[args.command]
     try:
         return handler(args)
-    except (ValidationError, FileNotFoundError, ValueError) as exc:
+    except (ValidationError, FileNotFoundError, ValueError, ImportError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
     except BrokenPipeError:  # pragma: no cover - piping into head/less
